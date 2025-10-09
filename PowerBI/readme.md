@@ -9,6 +9,7 @@
 *(Đây là nơi quan trọng nhất! Bạn hãy chụp một hoặc hai tấm ảnh đẹp nhất của dashboard và thay thế đường dẫn bên dưới. Một hình ảnh trực quan là cách tốt nhất để gây ấn tượng với nhà tuyển dụng.)*
 
 ![Google Ads Dashboard Preview](https://github.com/saig0nvang/Personal/blob/main/PowerBI/assets/dbshot1.png)
+![Google Ads Dashboard Preview](https://github.com/saig0nvang/Personal/blob/main/PowerBI/assets/dbshot2.png)
 
 ---
 
