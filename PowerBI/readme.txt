@@ -8,7 +8,7 @@
 
 *(Đây là nơi quan trọng nhất! Bạn hãy chụp một hoặc hai tấm ảnh đẹp nhất của dashboard và thay thế đường dẫn bên dưới. Một hình ảnh trực quan là cách tốt nhất để gây ấn tượng với nhà tuyển dụng.)*
 
-![Google Ads Dashboard Preview](URL_TO_YOUR_DASHBOARD_SCREENSHOT.png)
+![Google Ads Dashboard Preview](./assets/dbshot1.png)
 
 ---
 
