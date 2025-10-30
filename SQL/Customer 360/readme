@@ -1,74 +1,81 @@
-# Phân tích Phân khúc Khách hàng với Mô hình RFM (Customer Segmentation with RFM)
+Phân tích Phân khúc Khách hàng với Mô hình RFM (Customer Segmentation with RFM)
+Dự án này thực hiện phân tích và phân khúc khách hàng bằng mô hình RFM (Recency, Frequency, Monetary). Mục tiêu là để hiểu rõ hơn các nhóm hành vi của khách hàng, từ đó giúp doanh nghiệp đưa ra các chiến lược tiếp thị được cá nhân hóa, tối ưu hóa chi phí và nâng cao sự hài lòng của khách hàng.
 
-[cite_start]Dự án này thực hiện phân tích và phân khúc khách hàng bằng mô hình RFM (Recency, Frequency, Monetary)[cite: 49, 50]. [cite_start]Mục tiêu là để hiểu rõ hơn các nhóm hành vi của khách hàng, từ đó giúp doanh nghiệp đưa ra các chiến lược tiếp thị được cá nhân hóa, tối ưu hóa chi phí và nâng cao sự hài lòng của khách hàng[cite: 54].
+🎯 Mục tiêu kinh doanh
+Customer 360 là một hệ thống phân tích thông tin khách hàng, cho phép công ty khai thác nhiều khía cạnh để phục vụ công việc kinh doanh. Bằng cách áp dụng mô hình RFM, dự án này hướng tới:
 
----
+Xác định các nhóm khách hàng cốt lõi: Phân loại khách hàng thành các nhóm riêng biệt như "Champions," "Potential Loyalists," "At Risk," v.v..
 
-### 🎯 Mục tiêu kinh doanh
+Tối ưu hóa chiến dịch Marketing: Tăng hiệu quả của các chiến dịch bằng cách nhắm mục tiêu vào đúng nhóm khách hàng với những thông điệp phù hợp.
 
-[cite_start]Customer 360 là một hệ thống phân tích thông tin khách hàng, cho phép công ty khai thác nhiều khía cạnh để phục vụ công việc kinh doanh[cite: 48]. Bằng cách áp dụng mô hình RFM, dự án này hướng tới:
-* [cite_start]**Xác định các nhóm khách hàng cốt lõi:** Phân loại khách hàng thành các nhóm riêng biệt như "Champions," "Potential Loyalists," "At Risk," v.v.[cite: 57].
-* [cite_start]**Tối ưu hóa chiến dịch Marketing:** Tăng hiệu quả của các chiến dịch bằng cách nhắm mục tiêu vào đúng nhóm khách hàng với những thông điệp phù hợp[cite: 54].
-* [cite_start]**Cải thiện tỷ lệ giữ chân khách hàng:** Đưa ra các chiến lược phù hợp để giữ chân những khách hàng có giá trị và tái tương tác với những người có nguy cơ rời đi[cite: 57].
+Cải thiện tỷ lệ giữ chân khách hàng: Đưa ra các chiến lược phù hợp để giữ chân những khách hàng có giá trị và tái tương tác với những người có nguy cơ rời đi.
 
----
-
-### 🛠️ Quy trình kỹ thuật
-
+🛠️ Quy trình kỹ thuật
 Quá trình phân tích được thực hiện hoàn toàn bằng SQL, bao gồm các bước chính sau:
 
-#### 1. Tính toán các giá trị RFM
+1. Tính toán các giá trị RFM
 Một bảng chi tiết được tạo ra để tính toán ba chỉ số cốt lõi cho mỗi khách hàng:
-* [cite_start]**Recency (R):** Tính bằng số ngày kể từ lần mua hàng cuối cùng của khách hàng cho đến ngày phân tích (ví dụ: '2022-09-01')[cite: 51].
-    ```sql
-    DATEDIFF('2022-09-01', max(Purchase_Date)) as Recentcy
-    ```
-* [cite_start]**Frequency (F):** Tần suất mua hàng, được chuẩn hóa theo "tuổi" của khách hàng (thời gian kể từ ngày đăng ký) để đảm bảo sự công bằng giữa khách hàng mới và cũ[cite: 52].
-    ```sql
-    count(Purchase_Date) * 1.0 / (YEAR('2022-01-01') - YEAR(created_date))
-    ```
-* [cite_start]**Monetary (M):** Tổng giá trị chi tiêu (GMV), cũng được chuẩn hóa theo "tuổi" của khách hàng[cite: 53].
-    ```sql
-    sum(GMV) / (YEAR('2022-01-01') - YEAR(created_date))
-    ```
 
-#### 2. Chấm điểm RFM (Scoring)
-[cite_start]Khách hàng được chấm điểm từ 1 đến 5 cho mỗi chỉ số dựa trên phương pháp **ngũ phân vị (Quintile)**[cite: 56].
-* Điểm **Recency** càng cao nếu khách hàng mua hàng càng gần đây.
-* Điểm **Frequency** và **Monetary** càng cao nếu tần suất và chi tiêu càng lớn.
+Recency (R): Tính bằng số ngày kể từ lần mua hàng cuối cùng của khách hàng cho đến ngày phân tích (ví dụ: '2022-09-01').
 
-Điều này được thực hiện bằng cách sử dụng `ROW_NUMBER()` trong SQL để xếp hạng khách hàng và sau đó chia họ thành 5 nhóm bằng nhau.
+SQL
 
-#### 3. Phân khúc khách hàng (Segmentation)
-Các điểm R, F, M riêng lẻ được kết hợp thành một điểm RFM tổng hợp, sau đó được ánh xạ tới các phân khúc khách hàng đã được định nghĩa trước thông qua câu lệnh `CASE`, ví dụ:
-* [cite_start]`RFM Score = 555` -> **Champions** [cite: 57]
-* [cite_start]`RFM Score = 451` -> **Potential Loyalist** [cite: 57]
-* [cite_start]`RFM Score = 112` -> **Lost customers** [cite: 57]
+DATEDIFF('2022-09-01', max(Purchase_Date)) as Recentcy
+Frequency (F): Tần suất mua hàng, được chuẩn hóa theo "tuổi" của khách hàng (thời gian kể từ ngày đăng ký) để đảm bảo sự công bằng giữa khách hàng mới và cũ.
 
----
+SQL
 
-### 📊 Trực quan hóa và Phân tích
+count(Purchase_Date) * 1.0 / (YEAR('2022-01-01') - YEAR(created_date))
+Monetary (M): Tổng giá trị chi tiêu (GMV), cũng được chuẩn hóa theo "tuổi" của khách hàng.
 
-*Dữ liệu sau khi được phân khúc được trực quan hóa bằng Power BI để rút ra các insight.*
+SQL
 
-#### Tổng quan
-* [cite_start]**Tổng số khách hàng:** 936.66K [cite: 59]
-* [cite_start]**Tổng lợi nhuận:** 83 tỷ [cite: 59]
-* [cite_start]**Tần suất mua trung bình:** 0.65 [cite: 59]
+sum(GMV) / (YEAR('2022-01-01') - YEAR(created_date))
+2. Chấm điểm RFM (Scoring)
+Khách hàng được chấm điểm từ 1 đến 5 cho mỗi chỉ số dựa trên phương pháp ngũ phân vị (Quintile).
 
-#### Các phát hiện chính
-* [cite_start]**Nhóm đóng góp doanh thu lớn nhất:** "Champions" và "Potential Loyalists" là hai nhóm mang lại doanh thu cao nhất, cả hai đều có tần suất mua hàng cao (khoảng 1 lần/tháng)[cite: 60].
-* [cite_start]**Cơ hội bị bỏ lỡ:** Nhóm "Potential Loyalist" chiếm tỷ trọng lớn nhất về số lượng khách hàng (24.87%), nhưng nhóm "Loyal" lại chiếm tỷ trọng rất nhỏ (3.81%)[cite: 66]. [cite_start]Điều này cho thấy doanh nghiệp **chưa làm tốt việc chuyển đổi khách hàng tiềm năng thành khách hàng trung thành**[cite: 67].
-* [cite_start]**Rủi ro tiềm ẩn:** Nhóm lớn thứ hai là "Hibernating customers" (khách hàng ngủ đông, 19.10%), những người có doanh thu cao nhưng tần suất mua lại thấp[cite: 62, 64]. [cite_start]Đây là nhóm cần được tái kích hoạt để tránh nguy cơ mất khách hàng vào tay đối thủ[cite: 68, 69].
+Điểm Recency càng cao nếu khách hàng mua hàng càng gần đây.
 
-### 💡 Đề xuất hành động
-1.  **Tập trung vào việc chuyển đổi:** Triển khai các chiến dịch đặc biệt (ví dụ: chương trình khách hàng thân thiết, ưu đãi độc quyền) cho nhóm "Potential Loyalists" để khuyến khích họ mua sắm nhiều hơn và trở thành "Loyal" hoặc "Champions".
-2.  [cite_start]**Tái kích hoạt khách hàng "ngủ đông":** Gửi các chiến dịch email/thông báo cá nhân hóa cho nhóm "Hibernating customers" với các ưu đãi hấp dẫn để khuyến khích họ quay trở lại[cite: 69].
-3.  [cite_start]**Duy trì nhóm "Champions":** Tiếp tục duy trì các chính sách hiện tại cho nhóm khách hàng giá trị nhất này để đảm bảo sự hài lòng và ủng hộ của họ[cite: 71].
+Điểm Frequency và Monetary càng cao nếu tần suất và chi tiêu càng lớn.
 
----
+Điều này được thực hiện bằng cách sử dụng ROW_NUMBER() trong SQL để xếp hạng khách hàng và sau đó chia họ thành 5 nhóm bằng nhau.
 
-### 📂 Cấu trúc Repository
-* **README.md:** File giới thiệu tổng quan về dự án.
-* **PHÂN TÍCH CUSTOMER360-RFM.docx:** File báo cáo chi tiết về bối cảnh và kết quả phân tích.
-* **rfm_script.sql:** File chứa mã nguồn SQL được sử dụng để xử lý dữ liệu và phân khúc khách hàng.
+3. Phân khúc khách hàng (Segmentation)
+Các điểm R, F, M riêng lẻ được kết hợp thành một điểm RFM tổng hợp, sau đó được ánh xạ tới các phân khúc khách hàng đã được định nghĩa trước thông qua câu lệnh CASE, ví dụ:
+
+RFM Score = 555 -> Champions
+
+RFM Score = 451 -> Potential Loyalist
+
+RFM Score = 112 -> Lost customers
+
+📊 Trực quan hóa và Phân tích
+Dữ liệu sau khi được phân khúc được trực quan hóa bằng Power BI để rút ra các insight.
+
+Tổng quan
+Tổng số khách hàng: 936.66K
+
+Tổng lợi nhuận: 83 tỷ
+
+Tần suất mua trung bình: 0.65
+
+Các phát hiện chính
+Nhóm đóng góp doanh thu lớn nhất: "Champions" và "Potential Loyalists" là hai nhóm mang lại doanh thu cao nhất, cả hai đều có tần suất mua hàng cao (khoảng 1 lần/tháng).
+
+Cơ hội bị bỏ lỡ: Nhóm "Potential Loyalist" chiếm tỷ trọng lớn nhất về số lượng khách hàng (24.87%), nhưng nhóm "Loyal" lại chiếm tỷ trọng rất nhỏ (3.81%). Điều này cho thấy doanh nghiệp chưa làm tốt việc chuyển đổi khách hàng tiềm năng thành khách hàng trung thành.
+
+Rủi ro tiềm ẩn: Nhóm lớn thứ hai là "Hibernating customers" (khách hàng ngủ đông, 19.10%), những người có doanh thu cao nhưng tần suất mua lại thấp. Đây là nhóm cần được tái kích hoạt để tránh nguy cơ mất khách hàng vào tay đối thủ.
+
+💡 Đề xuất hành động
+Tập trung vào việc chuyển đổi: Triển khai các chiến dịch đặc biệt (ví dụ: chương trình khách hàng thân thiết, ưu đãi độc quyền) cho nhóm "Potential Loyalists" để khuyến khích họ mua sắm nhiều hơn và trở thành "Loyal" hoặc "Champions".
+
+Tái kích hoạt khách hàng "ngủ đông": Gửi các chiến dịch email/thông báo cá nhân hóa cho nhóm "Hibernating customers" với các ưu đãi hấp dẫn để khuyến khích họ quay trở lại.
+
+Duy trì nhóm "Champions": Tiếp tục duy trì các chính sách hiện tại cho nhóm khách hàng giá trị nhất này để đảm bảo sự hài lòng và ủng hộ của họ.
+
+📂 Cấu trúc Repository
+README.md: File giới thiệu tổng quan về dự án.
+
+PHÂN TÍCH CUSTOMER360-RFM.docx: File báo cáo chi tiết về bối cảnh và kết quả phân tích.
+
+rfm_script.sql: File chứa mã nguồn SQL được sử dụng để xử lý dữ liệu và phân khúc khách hàng.
