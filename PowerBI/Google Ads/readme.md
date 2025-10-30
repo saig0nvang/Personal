@@ -7,8 +7,8 @@
 ### 📸 Dashboard Preview
 
 
-![Google Ads Dashboard Preview](https://github.com/saig0nvang/Personal/blob/main/PowerBI/Google Ads/assets/dbshot1.png)
-![Google Ads Dashboard Preview](https://github.com/saig0nvang/Personal/blob/main/PowerBI/Google Ads/assets/dbshot2.png)
+![Google Ads Dashboard Preview](https://github.com/saig0nvang/Personal/blob/main/PowerBI/Google%20Ads/assets/dbshot1.png)
+![Google Ads Dashboard Preview](https://github.com/saig0nvang/Personal/blob/main/PowerBI/Google%20Ads/assets/dbshot2.png)
 
 ---
 
