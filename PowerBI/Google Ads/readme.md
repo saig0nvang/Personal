@@ -1,7 +1,6 @@
-# Phân tích Hiệu suất Chiến dịch Google Ads (Google Ads Performance Dashboard)
+# Google Ads Performance Dashboard
 
-Đây là một dự án phân tích dữ liệu và trực quan hóa bằng Microsoft Power BI, tập trung vào việc đánh giá hiệu suất của các chiến dịch quảng cáo trên nền tảng Google Ads. Dashboard này cung cấp một cái nhìn tổng quan, đa chiều về các chỉ số quan trọng, giúp các nhà tiếp thị và nhà phân tích đưa ra quyết định dựa trên dữ liệu (data-driven decisions).
-
+This is a data analysis and visualization project using Microsoft Power BI, focusing on evaluating the performance of Google Ads campaigns. This dashboard provides a comprehensive, multi-dimensional overview of key metrics, helping marketers and analysts make data-driven decisions.
 ---
 
 ### 📸 Dashboard Preview
@@ -12,34 +11,40 @@
 
 ---
 
-### Mục tiêu dự án
+### 🎯 Project Objectives
 
-* **Trực quan hóa dữ liệu:** Chuyển đổi các bảng dữ liệu thô từ Google Ads thành một dashboard tương tác, dễ hiểu và có tính thẩm mỹ cao.
-* **Phân tích hiệu suất:** Đánh giá hiệu quả của các chiến dịch, nhóm quảng cáo và từ khóa dựa trên các chỉ số KPI (Key Performance Indicator) chính.
-* **Tìm kiếm Insight:** Khám phá các xu hướng, điểm bất thường và cơ hội tiềm ẩn để tối ưu hóa chi phí và tăng tỷ lệ chuyển đổi (Conversion Rate).
-
----
-
-### Các tính năng chính của Dashboard
-
-* Tổng quan hiệu suất (Overview): Hiển thị các chỉ số KPI quan trọng nhất như:
-    * Chi phí (Cost)
-    * Lượt hiển thị (Impressions)
-    * Lượt nhấp (Clicks)
-    * Tỷ lệ nhấp (CTR - Click-Through Rate)
-    * Chi phí mỗi lượt nhấp (CPC - Cost Per Click
-    * Chuyển đổi (Conversions)
-    * Chi phí mỗi chuyển đổi (Cost Per Conversion)
-* Phân tích theo thời gian: Theo dõi xu hướng của các chỉ số KPI theo ngày, tuần, hoặc tháng để xác định các mùa vụ hoặc ảnh hưởng của các sự kiện.
-* So sánh chiến dịch: Đặt các chiến dịch lên bàn cân để so sánh hiệu quả và phân bổ ngân sách hợp lý.
-* Phân tích sâu (Drill-down): Khả năng xem chi tiết từ cấp chiến dịch xuống nhóm quảng cáo và từ khóa.
-* Bộ lọc tương tác (Slicers): Cho phép người dùng tùy chỉnh báo cáo bằng cách lọc dữ liệu theo khoảng thời gian, tên chiến dịch, thiết bị (Desktop/Mobile), v.v.
+* **Data Visualization:** Transform raw data tables from Google Ads into an interactive, easy-to-understand, and aesthetically pleasing dashboard.
+* **Performance Analysis:** Evaluate the effectiveness of campaigns, ad groups, and keywords based on key KPIs (Key Performance Indicators).
+* **Finding Insights:** Discover trends, anomalies, and hidden opportunities to optimize costs and increase the Conversion Rate.
 
 ---
 
+### ✨ Key Dashboard Features
 
-### Một số file chính:
+* **Performance Overview:** Displays the most important KPIs, such as:
+    * **Cost**
+    * **Impressions**
+    * **Clicks**
+    * **CTR (Click-Through Rate)**
+    * **CPC (Cost Per Click)**
+    * **Conversions**
+    * **Cost Per Conversion**
+* **Time-Series Analysis:** Tracks KPI trends by day, week, or month to identify seasonal patterns or the impact of events.
+* **Campaign Comparison:** Allows for side-by-side comparison of campaigns to evaluate effectiveness and allocate budgets efficiently.
+* **Drill-Down Analysis:** Provides the ability to view details from the campaign level down to ad groups and keywords.
+* **Interactive Slicers:** Allows users to customize the report by filtering data based on date range, campaign name, device (Desktop/Mobile), etc.
 
-* /GGDAS.pbix: File Power BI chính chứa toàn bộ báo cáo, mô hình dữ liệu (data model) và các truy vấn.
-* /README.md: File giới thiệu tổng quan về dự án.
-* /Dictionary(Google Adworks): File mô tả dữ liệu.
+---
+
+### 🛠️ Tools and Technology
+
+* **Main Platform:** `Microsoft Power BI`
+* **Query & Calculation Language:** `DAX (Data Analysis Expressions)` to create complex Measures and Calculated Columns.
+* **Data Source (Assumption):** Data exported from Google Ads as `.csv` files.
+
+---
+### Main Files:
+
+* **/GGDAS.pbix:** The main Power BI file containing the complete report, data model, and queries.
+* **/README.md:** This overview file for the project.
+* **/Dictionary(Google Adworks)**: Data description file
