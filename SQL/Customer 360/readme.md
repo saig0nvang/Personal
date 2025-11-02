@@ -32,10 +32,13 @@ Customers were scored from 1 to 5 for each metric based on the **Quintile**.
 * A higher **Recency** score is given for more recent purchases.
 * Higher **Frequency** and **Monetary** scores are given for greater frequency and spending.
 
-#### 3. Phân khúc khách hàng (Segmentation)
+#### 3. Customer Segmentation
 The individual R, F, and M scores are combined into a consolidated RFM score, which is then mapped to pre-defined customer segments using a `CASE` statement, for example:
+
 *`RFM Score = 555` -> **Champions** 
+
 *`RFM Score = 451` -> **Potential Loyalist** 
+
 *`RFM Score = 112` -> **Lost customers** 
 
 ---
