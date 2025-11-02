@@ -1,48 +1,48 @@
-# Phân tích Phân khúc Khách hàng với Mô hình RFM (Customer Segmentation with RFM)
+# RFM Customer Segmentation Analysis
 
-Dự án này thực hiện phân tích và phân khúc khách hàng bằng mô hình RFM (Recency, Frequency, Monetary). Mục tiêu là để hiểu rõ hơn các nhóm hành vi của khách hàng, từ đó giúp doanh nghiệp đưa ra các chiến lược tiếp thị được cá nhân hóa, tối ưu hóa chi phí và nâng cao sự hài lòng của khách hàng.
-
----
-
-### 🎯 Mục tiêu kinh doanh
-
-Customer 360 là một hệ thống phân tích thông tin khách hàng, cho phép công ty khai thác nhiều khía cạnh để phục vụ công việc kinh doanh[cite: 48]. Bằng cách áp dụng mô hình RFM, dự án này hướng tới:
-**Xác định các nhóm khách hàng cốt lõi:** Phân loại khách hàng thành các nhóm riêng biệt như "Champions," "Potential Loyalists," "At Risk," v.v.
-**Tối ưu hóa chiến dịch Marketing:** Tăng hiệu quả của các chiến dịch bằng cách nhắm mục tiêu vào đúng nhóm khách hàng với những thông điệp phù hợp.
-**Cải thiện tỷ lệ giữ chân khách hàng:** Đưa ra các chiến lược phù hợp để giữ chân những khách hàng có giá trị và tái tương tác với những người có nguy cơ rời đi.
+This project implements customer segmentation using the RFM (Recency, Frequency, Monetary) model. The objective is to gain deeper insights into customer behavior groups, which helps the business deploy personalized marketing strategies, optimize costs, and enhance customer satisfaction.
 
 ---
 
-### 🛠️ Quy trình kỹ thuật
+### 🎯 Business Objectives
 
-Quá trình phân tích được thực hiện hoàn toàn bằng SQL, bao gồm các bước chính sau:
+Customer 360 is a system for analyzing customer information, allowing the company to leverage multiple aspects to serve business operations. By applying the RFM model, this project aims to:
 
-#### 1. Tính toán các giá trị RFM
-Một bảng chi tiết được tạo ra để tính toán ba chỉ số cốt lõi cho mỗi khách hàng:
-**Recency (R):** Tính bằng số ngày kể từ lần mua hàng cuối cùng của khách hàng cho đến ngày phân tích (ví dụ: '2022-09-01').
+**Identify Key Customer Segments:** Classify customers into distinct groups such as "Champions," "Potential Loyalists," "At Risk," etc.
+**Optimize Marketing Campaigns:** Increase campaign effectiveness by targeting the right customer groups with appropriate messages.
+**Improve Customer Retention:** Develop suitable strategies to retain high-value customers and re-engage those at risk of churning.
 
-**Frequency (F):** Tần suất mua hàng, được chuẩn hóa theo "tuổi" của khách hàng (thời gian kể từ ngày đăng ký) để đảm bảo sự công bằng giữa khách hàng mới và cũ.
+---
 
-**Monetary (M):** Tổng giá trị chi tiêu (GMV), cũng được chuẩn hóa theo "tuổi" của khách hàng.
+### 🛠️ Technical Process
+
+The analysis process was performed entirely in SQL and included the following main steps:
+
+#### 1. Calculating RFM Values
+A detailed table was created to calculate the three core metrics for each customer:
+**Recency (R):** Calculated as the number of days from the customer's last purchase to the analysis date (e.g., '2022-09-01').
+
+**Frequency (F):** Purchase frequency, normalized by the customer's "age" (time since registration) to ensure fairness between new and old customers.
+
+**Monetary (M):** Total monetary value (GMV), also normalized by the customer's "age".
  
 
-#### 2. Chấm điểm RFM (Scoring)
-Khách hàng được chấm điểm từ 1 đến 5 cho mỗi chỉ số dựa trên phương pháp **ngũ phân vị (Quintile)**.
-* Điểm **Recency** càng cao nếu khách hàng mua hàng càng gần đây.
-* Điểm **Frequency** và **Monetary** càng cao nếu tần suất và chi tiêu càng lớn.
-
+#### 2. RFM Scoring
+Customers were scored from 1 to 5 for each metric based on the **Quintile**.
+* A higher **Recency** score is given for more recent purchases.
+* Higher **Frequency** and **Monetary** scores are given for greater frequency and spending.
 
 #### 3. Phân khúc khách hàng (Segmentation)
-Các điểm R, F, M riêng lẻ được kết hợp thành một điểm RFM tổng hợp, sau đó được ánh xạ tới các phân khúc khách hàng đã được định nghĩa trước thông qua câu lệnh `CASE`, ví dụ:
-*RFM Score = 555` -> **Champions** 
-*RFM Score = 451` -> **Potential Loyalist** 
-*RFM Score = 112` -> **Lost customers** 
+The individual R, F, and M scores are combined into a consolidated RFM score, which is then mapped to pre-defined customer segments using a `CASE` statement, for example:
+*`RFM Score = 555` -> **Champions** 
+*`RFM Score = 451` -> **Potential Loyalist** 
+*`RFM Score = 112` -> **Lost customers** 
 
 ---
 
-### 📊 Trực quan hóa và Phân tích:
+### 📊 Visualization and Analysis:
 
-*Dữ liệu sau khi được phân khúc bằng SQL được trực quan hóa sử dụng Power BI để rút ra các insight.*
+*The segmented data from SQL was then visualized using Power BI to derive insights.*
 
 
 ---
