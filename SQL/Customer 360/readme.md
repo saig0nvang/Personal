@@ -35,11 +35,11 @@ Customers were scored from 1 to 5 for each metric based on the **Quintile**.
 #### 3. Customer Segmentation
 The individual R, F, and M scores are combined into a consolidated RFM score, which is then mapped to pre-defined customer segments using a `CASE` statement, for example:
 
-*`RFM Score = 555` -> **Champions** 
+`RFM Score = 555` -> **Champions** 
 
-*`RFM Score = 451` -> **Potential Loyalist** 
+`RFM Score = 451` -> **Potential Loyalist** 
 
-*`RFM Score = 112` -> **Lost customers** 
+`RFM Score = 112` -> **Lost customers** 
 
 ---
 
