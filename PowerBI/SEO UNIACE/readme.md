@@ -42,15 +42,15 @@ Dự án này tập trung phân tích hiệu quả SEO, lưu lượng truy cập
 *(Lưu ý: Bạn hãy chụp ảnh các trang trong file PDF và chèn vào folder 'images' trong repo của bạn, sau đó thay thế đường dẫn bên dưới)*
 
 ### 1. SEO Overview & Traffic
-![SEO Overview]([./images/seo-overview.png](https://github.com/saig0nvang/Personal/blob/main/PowerBI/SEO%20UNIACE/assest/overview.jpg))
+![SEO Overview](https://github.com/saig0nvang/Personal/blob/main/PowerBI/SEO%20UNIACE/assest/overview.jpg)
 *Tổng quan về lưu lượng truy cập, IP và tỷ lệ chuyển đổi.*
 
 ### 2. Demographics Analysis
-![Demographics](./images/demographics.png)
+![Demographics](https://github.com/saig0nvang/Personal/blob/main/PowerBI/SEO%20UNIACE/assest/demographic.jpg)
 *Phân tích đối tượng người dùng theo khu vực, trường đại học và nghề nghiệp.*
 
 ### 3. Content Performance
-![Content Analysis](./images/content-analysis.png)
+![Content Analysis](https://github.com/saig0nvang/Personal/blob/main/PowerBI/SEO%20UNIACE/assest/content.jpg)
 *Hiệu quả của các bài blog và khóa học.*
 
 ---
