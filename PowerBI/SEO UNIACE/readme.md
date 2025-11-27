@@ -42,15 +42,15 @@ This project focuses on analyzing SEO effectiveness, website traffic, and user b
 *(Note: Capture screenshots of pages from the PDF file and insert them into the 'images' folder in your repository, then replace the paths below)*
 
 ### 1. SEO Overview & Traffic
-![SEO Overview](./images/seo-overview.png)
+![SEO Overview](https://github.com/saig0nvang/Personal/blob/main/PowerBI/SEO%20UNIACE/assest/overview.jpg)
 *Overview of traffic, IP addresses, and conversion rates.*
 
 ### 2. Demographics Analysis
-![Demographics](./images/demographics.png)
+![Demographics](https://github.com/saig0nvang/Personal/blob/main/PowerBI/SEO%20UNIACE/assest/demographic.jpg)
 *User analysis by region, university, and occupation.*
 
 ### 3. Content Performance
-![Content Analysis](./images/content-analysis.png)
+![Content Analysis](https://github.com/saig0nvang/Personal/blob/main/PowerBI/SEO%20UNIACE/assest/content.jpg)
 *Performance of blog posts and courses.*
 
 ---
