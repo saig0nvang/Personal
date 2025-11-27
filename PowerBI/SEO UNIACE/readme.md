@@ -100,7 +100,6 @@ Based on the data above, I propose the following actions:
 
 **Pham Viet Anh**
 * Role: Data Analyst
-* Email: [Your Email]
-* LinkedIn: [Your LinkedIn Link]
+* Email: anhpv2710@gmail.com
 
 *Thank you for viewing this project!*
