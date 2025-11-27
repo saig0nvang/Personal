@@ -39,7 +39,6 @@ This project focuses on analyzing SEO effectiveness, website traffic, and user b
 
 ## 🖼 Dashboard Visuals
 
-*(Note: Capture screenshots of pages from the PDF file and insert them into the 'images' folder in your repository, then replace the paths below)*
 
 ### 1. SEO Overview & Traffic
 ![SEO Overview](https://github.com/saig0nvang/Personal/blob/main/PowerBI/SEO%20UNIACE/assest/overview.jpg)
