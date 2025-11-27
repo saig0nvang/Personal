@@ -1,5 +1,4 @@
-
-                                                                                            KEY DRM MONITOR
+# KEY DRM MONITOR
 
 
 * Problem Overview
