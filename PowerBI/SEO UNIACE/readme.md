@@ -100,7 +100,6 @@ Từ những dữ liệu trên, tôi đề xuất các hành động sau:
 
 **Phạm Việt Anh**
 * Role: Data Analyst
-* Email: [Email của bạn]
-* LinkedIn: [Link LinkedIn của bạn]
+* Email: [anhpv2710@gmail.com]
 
 *Cảm ơn bạn đã xem qua dự án này!*
