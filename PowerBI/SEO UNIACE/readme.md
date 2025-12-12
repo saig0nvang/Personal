@@ -4,103 +4,101 @@
 ![Tool](https://img.shields.io/badge/Tools-PowerBI%20%7C%20Excel-blue)
 ![Role](https://img.shields.io/badge/Role-Data%20Analyst-orange)
 
-## 📖 Mục lục
-- [Tổng quan dự án](#-tổng-quan-dự-án)
-- [Dữ liệu & Công cụ](#-dữ-liệu--công-cụ)
+## 📖 Table of Contents
+- [Project Overview](#-project-overview)
+- [Data & Tools](#-data--tools)
 - [Dashboard Visuals](#-dashboard-visuals)
-- [Key Findings (Insight chính)](#-key-findings-insight-chính)
-- [Khuyến nghị kinh doanh](#-khuyến-nghị-kinh-doanh)
-- [Tác giả](#-tác-giả)
+- [Key Findings](#-key-findings)
+- [Business Recommendations](#-business-recommendations)
+- [Author](#-author)
 
 ---
 
-## 🚀 Tổng quan dự án
+## 🚀 Project Overview
 
-Dự án này tập trung phân tích hiệu quả SEO, lưu lượng truy cập (Traffic) và hành vi người dùng trên website **Uniace.vn** trong tháng 8 năm 2021. Mục tiêu là đánh giá hiệu quả của các chiến dịch Marketing (đặc biệt là chiến dịch KOL ngày 8/8 và Facebook ngày 12/8), từ đó đưa ra giải pháp tối ưu hóa nội dung và tỷ lệ chuyển đổi (Conversion Rate).
+This project focuses on analyzing SEO effectiveness, website traffic, and user behavior on **Uniace.vn** during August 2021. The goal is to evaluate the effectiveness of marketing campaigns (particularly the KOL campaign on August 8th and Facebook campaign on August 12th), and propose solutions to optimize content and conversion rates.
 
-**Mục tiêu chính:**
-* Theo dõi sức khỏe website qua các chỉ số: Pageviews, Unique Pageviews, Bounce Rate.
-* Phân tích đặc điểm nhân khẩu học (Demographics) của người dùng.
-* Đánh giá hiệu quả của từng kênh traffic và nội dung bài viết.
-* Phân tích phễu chuyển đổi (Conversion Funnel).
+**Main Objectives:**
+* Monitor website health through key metrics: Pageviews, Unique Pageviews, Bounce Rate.
+* Analyze user demographics.
+* Evaluate the effectiveness of each traffic channel and content piece.
+* Analyze the conversion funnel.
 
 ---
 
-## 📊 Dữ liệu & Công cụ
+## 📊 Data & Tools
 
-* **Thời gian thu thập:** 01/08/2021 - 24/08/2021.
-* **Nguồn dữ liệu:** Dữ liệu nội bộ website Uniace (Google Analytics/CRM export).
-* **Quy mô dữ liệu:** 14,945 địa chỉ IP, 49.70K lượt truy cập trang.
-* **Công cụ thực hiện:**
-    * **Excel:** Làm sạch dữ liệu, xử lý các trường thông tin (Data Mapping).
-    * **Power BI:** Xây dựng Data Model và trực quan hóa dữ liệu (Dashboarding).
+* **Collection Period:** August 1, 2021 - August 24, 2021.
+* **Data Source:** Internal Uniace website data (Google Analytics/CRM export).
+* **Data Scale:** 14,945 IP addresses, 49.70K pageviews.
+* **Tools Used:**
+    * **Excel:** Data cleaning and data mapping.
+    * **Power BI:** Data modeling and visualization (Dashboarding).
 
 ---
 
 ## 🖼 Dashboard Visuals
 
-*(Lưu ý: Bạn hãy chụp ảnh các trang trong file PDF và chèn vào folder 'images' trong repo của bạn, sau đó thay thế đường dẫn bên dưới)*
 
 ### 1. SEO Overview & Traffic
-![SEO Overview](./images/seo-overview.png)
-*Tổng quan về lưu lượng truy cập, IP và tỷ lệ chuyển đổi.*
+![SEO Overview](https://github.com/saig0nvang/Personal/blob/main/PowerBI/SEO%20UNIACE/assest/overview.jpg)
+*Overview of traffic, IP addresses, and conversion rates.*
 
 ### 2. Demographics Analysis
-![Demographics](./images/demographics.png)
-*Phân tích đối tượng người dùng theo khu vực, trường đại học và nghề nghiệp.*
+![Demographics](https://github.com/saig0nvang/Personal/blob/main/PowerBI/SEO%20UNIACE/assest/demographic.jpg)
+*User analysis by region, university, and occupation.*
 
 ### 3. Content Performance
-![Content Analysis](./images/content-analysis.png)
-*Hiệu quả của các bài blog và khóa học.*
+![Content Analysis](https://github.com/saig0nvang/Personal/blob/main/PowerBI/SEO%20UNIACE/assest/content.jpg)
+*Performance of blog posts and courses.*
 
 ---
 
-## 💡 Key Findings (Insight chính)
+## 💡 Key Findings
 
-Dựa trên quá trình phân tích dữ liệu, tôi đã rút ra các insight quan trọng sau:
+Based on the data analysis process, I have extracted the following key insights:
 
-### 1. Hiệu quả Traffic & Chiến dịch Marketing
-* **Lưu lượng:** Tổng Pageview đạt **49.70K** với tỷ lệ Pageview/Unique Pageview là 2.75:1.
-* **Tác động của chiến dịch:** Traffic tăng vọt vào ngày **09/08** (nhờ chiến dịch KOL/KOC ngày 08/08) và ngày **14/08** (chiến dịch Facebook ngày 12/08).
-* **So sánh hiệu quả:** Chiến dịch KOL (08/08) mang lại doanh số tốt hơn (101 đơn hàng - ngày cao nhất) so với chiến dịch Facebook (46 đơn hàng - ngày cao nhất), mặc dù chiến dịch Facebook có tỷ lệ "Add to cart" rất cao (65.01%).
+### 1. Traffic & Marketing Campaign Effectiveness
+* **Traffic Volume:** Total Pageviews reached **49.70K** with a Pageview/Unique Pageview ratio of 2.75:1.
+* **Campaign Impact:** Traffic surged on **August 9th** (due to KOL/KOC campaign on August 8th) and **August 14th** (Facebook campaign on August 12th).
+* **Performance Comparison:** The KOL campaign (08/08) generated better sales (101 orders - highest day) compared to the Facebook campaign (46 orders - highest day), despite the Facebook campaign having a very high "Add to cart" rate (65.01%).
 
-### 2. Hành vi & Nhân khẩu học (Demographics)
-* **Đối tượng:** 60.95% là sinh viên, 39.05% là người đi làm.
-* **Khu vực:** Tập trung chủ yếu tại **TP.HCM (14.8K)** và **Hà Nội (11.3K)**.
-* **Trường học:** Sinh viên đến từ các trường kinh tế như UEF, UEH, FTU chiếm đa số tài khoản đăng ký.
+### 2. User Behavior & Demographics
+* **Audience:** 60.95% students, 39.05% working professionals.
+* **Regions:** Primarily concentrated in **Ho Chi Minh City (14.8K)** and **Hanoi (11.3K)**.
+* **Universities:** Students from economics universities such as UEF, UEH, FTU account for the majority of registrations.
 
-### 3. Phân tích nội dung (Content Analysis)
-* **Chủ đề hot:** Các bài viết về kỹ năng **Microsoft Excel** (ví dụ: "Hướng dẫn cách copy giữ nguyên giá trị") và **Data Analytics** có lượt xem cao nhất.
-* **Chủ đề ít quan tâm:** Các bài viết về kỹ năng mềm, văn hóa hoặc kỹ năng sống có lượt truy cập thấp.
+### 3. Content Analysis
+* **Hot Topics:** Articles about **Microsoft Excel** skills (e.g., "Guide on how to copy while preserving values") and **Data Analytics** had the highest views.
+* **Low-Interest Topics:** Articles about soft skills, culture, or life skills had low traffic.
 
-### 4. Vấn đề tại phễu chuyển đổi (Funnel Issues)
-* Tỷ lệ chuyển đổi (Conversion Rate) tổng thể là **4.03%**.
-* **Điểm gãy (Drop-off point):** Có sự sụt giảm lớn từ bước "Xem trang" sang "Thêm vào giỏ hàng" (chỉ 5.95% người xem thực hiện thêm vào giỏ). Tuy nhiên, nếu đã thêm vào giỏ thì tỷ lệ hoàn tất đơn hàng khá ổn định (~28%).
-
----
-
-## 🎯 Khuyến nghị kinh doanh
-
-Từ những dữ liệu trên, tôi đề xuất các hành động sau:
-
-1.  **Tối ưu nội dung:**
-    * Tập trung sản xuất thêm nội dung chuyên sâu về **Excel, Data Analysis** và lộ trình nghề nghiệp dữ liệu.
-    * Giảm bớt nguồn lực cho các bài viết kỹ năng mềm chung chung.
-2.  **Cải thiện trải nghiệm người dùng (UX):**
-    * Kiểm tra và thiết kế lại nút **"Add to Cart"** (Thêm vào giỏ hàng) để nổi bật và thuận tiện hơn, do tỷ lệ rớt tại bước này quá cao.
-3.  **Chiến lược Marketing:**
-    * Tiếp tục đẩy mạnh kênh KOL/KOC vì tỷ lệ chốt đơn (Sales) cao hơn chạy quảng cáo Facebook thuần túy.
-    * Tại TP.HCM: Tập trung target vào sinh viên UEL, UEF, UEH. Tại Hà Nội: Tập trung vào FTU và UEH.
-4.  **Phát triển sản phẩm:**
-    * Xây dựng các khóa học trọn gói (Combo/Holistic development) về Dữ liệu thay vì bán lẻ từng kỹ năng.
+### 4. Conversion Funnel Issues
+* Overall Conversion Rate is **4.03%**.
+* **Drop-off Point:** There is a significant drop from "Page View" to "Add to Cart" (only 5.95% of viewers add items to cart). However, once items are added to cart, the order completion rate is quite stable (~28%).
 
 ---
 
-## 👤 Tác giả
+## 🎯 Business Recommendations
 
-**Phạm Việt Anh**
+Based on the data above, I propose the following actions:
+
+1.  **Content Optimization:**
+    * Focus on producing more in-depth content about **Excel, Data Analysis**, and data career paths.
+    * Reduce resources for generic soft skills articles.
+2.  **User Experience (UX) Improvement:**
+    * Review and redesign the **"Add to Cart"** button to make it more prominent and user-friendly, as the drop-off rate at this step is too high.
+3.  **Marketing Strategy:**
+    * Continue to strengthen the KOL/KOC channel as it has a higher sales conversion rate than pure Facebook advertising.
+    * In Ho Chi Minh City: Focus targeting on students from UEL, UEF, UEH. In Hanoi: Focus on FTU and UEH.
+4.  **Product Development:**
+    * Build comprehensive course packages (Combo/Holistic development) about Data instead of selling individual skills separately.
+
+---
+
+## 👤 Author
+
+**Pham Viet Anh**
 * Role: Data Analyst
-* Email: [Email của bạn]
-* LinkedIn: [Link LinkedIn của bạn]
+* Email: anhpv2710@gmail.com
 
-*Cảm ơn bạn đã xem qua dự án này!*
+*Thank you for viewing this project!*
