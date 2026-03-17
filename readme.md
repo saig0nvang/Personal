@@ -1,6 +1,6 @@
 # DATA ANALYST PORTFOLIO
 
-I am VIET ANH, a recent graduate and aspiring Data Analyst equipped with a proactive attitude and a solid foundational skill set.
+I am a fresh graduate, a recent graduate and aspiring Data Analyst equipped with a proactive attitude and a solid foundational skill set.
 
 Through my studies, I have acquired core analytical competencies, i am proficient in Python, SQL, Power BI and have a solid understanding of data analytics techniques such as dashboard building, report writing, data cleaning, data mining, data merging, statistics, and critical thinking.
 
